@@ -37,12 +37,10 @@ jobs:
           vid: ${{ secrets.VID }}
           vkey: ${{ secrets.VKEY }}
           file: "verademo.war" 
-          debug: 1
-          fail_build: false
       - uses: actions/upload-artifact@v4
         with:
           name: Veracode Pipeline-Scan Results
-          path: results.json 
+          path: filtered_results.json 
 
   veracode-fix:
     runs-on: ubuntu-latest
@@ -68,4 +66,5 @@ jobs:
           source_base_path_2: "WEB-INF:src/main/webapp/WEB-INF"
           language: java
           prComment: true
+          fixType: single
           fixType: single
