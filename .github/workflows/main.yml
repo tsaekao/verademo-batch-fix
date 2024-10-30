@@ -67,4 +67,3 @@ jobs:
           language: java
           prComment: true
           fixType: single
-          fixType: single
