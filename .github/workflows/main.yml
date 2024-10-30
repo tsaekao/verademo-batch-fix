@@ -1,5 +1,7 @@
 name: Pipeline Scan and Veracode Fix
 on:
+  pull_request:
+    branches: [vFix-Test, vFix-Test-PR]
   workflow_dispatch:
 
 jobs:
